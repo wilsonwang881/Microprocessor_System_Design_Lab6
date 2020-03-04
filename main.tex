@@ -243,7 +243,7 @@ To interrupt the program, press q.
 
 \part{Conclusion}
 
-As mentioned in the introduction of the report, the hardware multiplier device driver has 6 functions. The device driver is loaded into the Linux kernel the same way as other kernel modules. In lab6, the driver is characterized as a character device driver since it handles data in characters, i.e. 8 bytes. Hence when writing program, always remember to convert input to 8 bytes of continuous data. Different data types such as integers or floats can take multiple bytes of space and to convert such kind of data to character array, type casting may be necessary. A straightforward way is to load the same chunk of data, i.e. a 12-byte-long character array, into an integer array that has three numbers, by using pointers.
+As mentioned in the introduction of the report, the hardware multiplier device driver has 6 functions. The device driver is loaded into the Linux kernel the same way as other kernel modules. In lab6, the driver is characterized as a character device driver since it handles data in characters, i.e. 8 bits is the minimum unit of data. Hence when writing program, always remember to convert input to bytes of continuous data. Different data types such as integers or floats can take multiple bytes of space and to convert such kind of data to character array, type casting may be necessary. A straightforward way is to load the same chunk of data, i.e. a 12-byte-long character array, into an integer array that has three numbers, by using pointers.
 
 The device driver is presented to the user in the form of a file. Hence conventional commands like \texttt{open} or \texttt{close} can be used to handle tasks like write to or read from the hardware.
 
